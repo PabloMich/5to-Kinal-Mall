@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDepartamentos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3658a92b-aaf9-4af6-a9ab-f881496502c7">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="133"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select * from Departamentos]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="121" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="70" width="555" height="25" uuid="9da9a284-b172-43ec-afb6-29deb1fcf436"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono: 21600000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="25" uuid="2d083769-eddb-4e0a-ab4a-6e1410898fa8"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6 Avenida 13-54, Colonia Landivar Zona 7, Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="555" height="25" uuid="f8c28b58-cd1e-46a4-bcde-2e6855f02fe9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="101" width="100" height="20" uuid="26ebc082-128d-4c51-8a34-162f2baaa0d9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="16" width="134" height="93" uuid="78a3e93b-c1c3-405b-b124-5158769fe362"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="37" uuid="fe860eda-e95a-46a9-a4b0-67a8a7596071"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE DEPARTAMENTOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="248" y="0" width="63" height="20" uuid="19d0268f-0dce-4036-b7c0-0c99e2a74cdf"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="42" height="20" uuid="061a96cd-83bd-4de2-8145-6e77777526a9"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="572" height="13" backcolor="#009999" uuid="97bace1a-2707-4122-8c95-bacfd08eb5ba"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="20" forecolor="#FFFF66" uuid="6a1aa3a3-9793-4a0b-bb37-545f2531c19d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="12" y="0" width="100" height="20" uuid="b8d379ca-37bd-4ee6-888e-aa4b92ee9a79"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="0" width="100" height="20" uuid="b547f481-a6f2-4d4b-84fb-f76a0c3769ab"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="221" y="26" width="127" height="13" uuid="2037882c-b745-493f-ab9e-45051e2ad2e4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IN5BM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="13" width="127" height="13" uuid="b29eb48c-6eb5-4f26-a6e7-2e180bbfb33f"/>
+				<text><![CDATA[pmich-2020009@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="127" height="13" uuid="1a52e30a-b580-499a-85df-f2e7335ac19c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pablo Emmanuel Mich Mux]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image>
+				<reportElement x="179" y="0" width="197" height="50" uuid="c14a60c2-70bb-426f-98de-2995944dc768"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

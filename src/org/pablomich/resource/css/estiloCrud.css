@@ -1,0 +1,14 @@
+/* 
+    Created on : 26/05/2021, 11:37:16
+    Author     : Pablo Emmanuel Mich Mux // Codigo Técnico: IN5BM
+*/
+
+.btns {
+    -fx-background-color:  #4e95b4;
+}
+
+.btns:hover {
+    -fx-background-color: #4dc0b8;
+    -fx-border-radius: 30 30 30 30;
+    -fx-font-size: 15px;
+}

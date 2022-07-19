@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bf02b329-7aa2-478a-b2b5-ece135aa1598">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select * from Administracion]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="60" width="572" height="25" uuid="ea4a4240-11ac-41c5-b67b-0b5360a7ca40"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono: 21600000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="572" height="25" uuid="d4450659-1732-4015-bc95-b7e86e7b31db"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6 Avenida 13-54, Colonia Landivar Zona 7, Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="572" height="25" uuid="5c5a75fb-a4fc-4b07-a6ca-292fbbe0a4fe"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="472" y="83" width="100" height="20" uuid="9577baeb-2b24-4c71-aae2-66cdc007038b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="10" width="134" height="93" uuid="a864e7a7-6513-46cc-8242-78cd23597d07"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="6" width="547" height="37" uuid="76bf8c2b-5568-4193-94b3-40a27264e33c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ADMINISTRACIÓN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="42" height="20" uuid="79800b73-4417-49e9-823d-9aa4de91d48e"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="63" height="20" uuid="4d168aff-4cb6-484b-b912-e309006c30c9"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="0" width="59" height="20" uuid="8fb8be0f-710d-40e7-8de1-2bc71e5edf13"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="572" height="13" backcolor="#009999" uuid="58d0549e-fb89-4f12-a505-523739ed847f"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="20" forecolor="#FFFF66" uuid="1cab9b71-44ff-41ed-a420-f78c3222345c"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="0" width="183" height="20" uuid="88a6b300-093c-4cb7-9de5-35413a14cea6"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="0" width="149" height="20" uuid="4c9d5878-2531-4dfc-8d4e-7184b3e9c5c6"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="0" width="137" height="20" uuid="45e3dd8c-d67a-4e18-8411-a38d4123278e"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="13" width="127" height="13" uuid="e63697e5-7f17-42bd-9ff1-b58282f1d13c"/>
+				<text><![CDATA[pmich-2020009@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="0" width="127" height="13" uuid="c8bd704a-74aa-43ed-8845-dd4fdeb651eb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pablo Emmanuel Mich Mux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="26" width="127" height="13" uuid="2fc96f83-7d5e-4e26-bcaa-672f62ad8a8b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IN5BM]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image>
+				<reportElement x="195" y="4" width="197" height="50" uuid="b9e5046b-ae37-4de7-88a4-912093596dea"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

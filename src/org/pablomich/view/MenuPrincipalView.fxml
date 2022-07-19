@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="890.0" stylesheets="@../resource/css/estiloKinalMall.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pablomich.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="890.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Sin%20título-4.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></ImageView>
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem fx:id="menuAdministracion" mnemonicParsing="false" onAction="#mostrarVistaAdministracion" text="Administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaDepartamentos" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaLocales" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaProveedores" text="Proveedores" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaCuentasPorPagar" text="Cuentas por Pagar" />
+              <MenuItem mnemonicParsing="false" text="Empleados" />
+                  <MenuItem mnemonicParsing="false" text="Cobros de Administración" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarVistaAutor" text="Autor" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="777.0" layoutY="449.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaLogin" text="Cerrar Sesión" />
+   </children>
+</AnchorPane>

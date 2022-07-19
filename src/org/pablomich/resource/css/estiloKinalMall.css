@@ -1,0 +1,32 @@
+
+/* 
+    Created on : 12/05/2021, 10:59:49 AM
+    Author     : Pablo Emmanuel Mich Mux // Codigo Técnico: IN5BM
+*/
+
+.menu-bar {
+    -fx-background-color: #41828f;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto Mono for PowerLine";
+}
+
+.context-menu {
+    -fx-background-color: #41828f;
+}
+
+.menu-bar .menu-button:hover {
+    -fx-background-color: black;
+}
+
+.menu-bar .menu-button .label:hover {
+    -fx-text-fill: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: black;
+}
